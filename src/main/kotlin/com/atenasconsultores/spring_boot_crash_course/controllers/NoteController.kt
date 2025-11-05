@@ -3,7 +3,9 @@ package com.atenasconsultores.spring_boot_crash_course.controllers
 import com.atenasconsultores.spring_boot_crash_course.database.model.Note
 import com.atenasconsultores.spring_boot_crash_course.database.respository.NoteRepository
 import org.bson.types.ObjectId
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -54,7 +56,13 @@ class NoteController(
             it.toResponse()
         }
     }
+
+    @DeleteMapping(path = ["/{id}"])
+    fun deleteById(@PathVariable id: String) {
+        repository.deleteById(ObjectId(id))
+    }
 }
+
 
 private fun Note.toResponse(): NoteController.NoteResponse {
     return NoteController.NoteResponse(

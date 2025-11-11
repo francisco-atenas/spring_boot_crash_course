@@ -1,7 +1,7 @@
 package com.atenasconsultores.spring_boot_crash_course.controllers
 
 import com.atenasconsultores.spring_boot_crash_course.database.model.Note
-import com.atenasconsultores.spring_boot_crash_course.database.respository.NoteRepository
+import com.atenasconsultores.spring_boot_crash_course.database.repository.NoteRepository
 import org.bson.types.ObjectId
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping

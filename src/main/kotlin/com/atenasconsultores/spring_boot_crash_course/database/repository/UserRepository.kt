@@ -1,4 +1,4 @@
-package com.atenasconsultores.spring_boot_crash_course.database.respository
+package com.atenasconsultores.spring_boot_crash_course.database.repository
 
 import com.atenasconsultores.spring_boot_crash_course.database.model.User
 import org.bson.types.ObjectId
